@@ -18,7 +18,7 @@ const pricingPlans = [
       { text: "Instant Access to our design system", type: "cross" },
       { text: "Create teams to collaborate on designs", type: "cross" },
     ],
-    buttonColor: "border-[#ed3c6a] text-[#ed3c6a]",
+    buttonColor: "border-[#ed3c6a] text-[#ed3c6a] cursor-pointer",
     bgColor: "",
     textColor: "text-neutral-800",
   },
@@ -37,7 +37,7 @@ const pricingPlans = [
       { text: "Instant Access to our design system", type: "cross" },
       { text: "Create teams to collaborate on designs", type: "cross" },
     ],
-    buttonColor: "bg-white text-[#ed3c6a]", // button background white, text color card bg
+    buttonColor: "bg-white text-[#ed3c6a] cursor-pointer", // button background white, text color card bg
     bgColor: "bg-[#ed3c6a]", // card bg
     textColor: "text-white", // all text white
   },
@@ -56,7 +56,7 @@ const pricingPlans = [
       { text: "Instant Access to our design system", type: "tick" },
       { text: "Create teams to collaborate on designs", type: "tick" },
     ],
-    buttonColor: "border-[#ed3c6a] text-[#ed3c6a]",
+    buttonColor: "border-[#ed3c6a] text-[#ed3c6a] cursor-pointer",
     bgColor: "",
     textColor: "text-neutral-800",
   },
@@ -114,10 +114,12 @@ const FeatureItem = ({
 
 export default function Pricing() {
   return (
-    <section className='relative w-full px-6 md:px-16 lg:px-32 py-16'>
+    <section
+      id='pricing'
+      className='relative w-full px-6 md:px-16 lg:px-32 py-16'>
       {/* Header */}
       <div className='flex flex-col items-center gap-4 relative self-stretch w-full flex-[0_0_auto]'>
-        <div className='relative max-w-[566px] mt-[-1.00px]  font-bold text-neutral-800 text-[40px] text-center tracking-[0] leading-[normal]'>
+        <div className='relative max-w-141.5 -mt-px  font-bold text-neutral-800 text-[40px] text-center tracking-[0] leading-[normal]'>
           <span className='text-[#191d23]'>Airnbn Assistent</span>
           <span className='text-[#ed3c6a]'> pricing</span>
         </div>
@@ -127,20 +129,20 @@ export default function Pricing() {
         </div>
       </div>
 
-      <div className='relative flex items-start justify-center gap-6 relative self-stretch w-full flex-[0_0_auto] sm:mb-22.5 mb-10'>
-        <div className='relative w-fit mt-[-1.00px]  font-normal text-neutral-800 text-base tracking-[0] leading-[normal]'>
+      <div className='relative flex items-start justify-center gap-6 self-stretch w-full flex-[0_0_auto] sm:mb-22.5 mb-10'>
+        <div className='relative w-fit -mt-px  font-normal text-neutral-800 text-base tracking-[0] leading-[normal]'>
           Pay Monthly
         </div>
 
         <Switch />
 
-        <div className='inline-flex flex-col items-center justify-center gap-[3px] relative flex-[0_0_auto]'>
-          <div className='relative w-fit mt-[-1.00px]  font-normal text-neutral-800 text-base tracking-[0] leading-[normal] '>
+        <div className='inline-flex flex-col items-center justify-center gap-0.75 relative flex-[0_0_auto]'>
+          <div className='relative w-fit -mt-px  font-normal text-neutral-800 text-base tracking-[0] leading-[normal] '>
             Pay Yearly
           </div>
         </div>
 
-        <div className='absolute sm:block hidden sm:-top-10 sm:left-[60%] w-[187px] h-[87px]'>
+        <div className='absolute sm:block hidden sm:-top-10 sm:left-[60%] w-46.75 h-21.75'>
           <Image
             className='absolute top-10 left-px'
             alt='Arrow'

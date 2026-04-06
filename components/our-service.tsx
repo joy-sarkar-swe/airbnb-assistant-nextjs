@@ -61,7 +61,9 @@ const serviceCards = [
 
 export default function OurService() {
   return (
-    <section className='w-full px-4 sm:px-6 md:px-12 lg:px-25  py-12 md:py-16'>
+    <section
+      id='services'
+      className='w-full px-4 sm:px-6 md:px-12 lg:px-25  py-12 md:py-16'>
       <div className='text-center mb-6 md:mb-8'>
         <h2 className='font-bold text-2xl md:text-3xl lg:text-4xl tracking-normal leading-snug'>
           <span className='text-black'>Our </span>
