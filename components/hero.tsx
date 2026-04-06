@@ -208,7 +208,7 @@ export default function Hero() {
               <ArrowRight className='w-3 h-3 xl:w-4 xl:h-4 transition-transform group-hover:translate-x-1' />
             </Button>
             <Link
-              href='#'
+              href={"#pricing"}
               className='text-sm text-black underline hover:text-[#ed3c6a] transition-colors duration-200'>
               See Pricing
             </Link>
