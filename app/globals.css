@@ -129,3 +129,20 @@
     @apply font-sans;
   }
 }
+
+.marquee {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: marquee 30s linear infinite;
+  width: max-content; /* Very important */
+  min-width: 100%; /* Ensures it covers the full width */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 60px)); /* Moves full width + one gap */
+  }
+}

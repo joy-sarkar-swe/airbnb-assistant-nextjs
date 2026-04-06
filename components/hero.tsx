@@ -3,50 +3,94 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-// Configuration objects
+// ----- Types -----
+type PositionKey =
+  | "logo-airbnb"
+  | "logo-booking"
+  | "logo-vrbo"
+  | "logo-trip"
+  | "ellipse-7"
+  | "ellipse-4"
+  | "ellipse-6"
+  | "ellipse-2"
+  | "ellipse-8"
+  | "ellipse-5"
+  | "ellipse-3";
+
+type SizeKey = "xs" | "sm" | "md";
+
+// ----- Config -----
 const floatingLogos = [
   {
     src: "/hero/airbnb.png",
     alt: "airbnb",
     width: 106,
     height: 106,
-    position: "logo-airbnb",
+    position: "logo-airbnb" as PositionKey,
   },
   {
     src: "/hero/b.png",
     alt: "booking",
     width: 65,
     height: 65,
-    position: "logo-booking",
+    position: "logo-booking" as PositionKey,
   },
   {
     src: "/hero/v.png",
     alt: "vrbo",
     width: 75,
     height: 75,
-    position: "logo-vrbo",
+    position: "logo-vrbo" as PositionKey,
   },
   {
     src: "/hero/trip.png",
     alt: "tripadvisor",
     width: 89,
     height: 89,
-    position: "logo-trip",
+    position: "logo-trip" as PositionKey,
   },
 ];
 
 const ellipses = [
-  { src: "/hero/Ellipse 7.png", size: "sm", position: "ellipse-7" },
-  { src: "/hero/Ellipse 4.png", size: "md", position: "ellipse-4" },
-  { src: "/hero/Ellipse 6.png", size: "sm", position: "ellipse-6" },
-  { src: "/hero/Ellipse 2.png", size: "sm", position: "ellipse-2" },
-  { src: "/hero/Ellipse 8.png", size: "xs", position: "ellipse-8" },
-  { src: "/hero/Ellipse 5.png", size: "sm", position: "ellipse-5" },
-  { src: "/hero/Ellipse 3.png", size: "xs", position: "ellipse-3" },
+  {
+    src: "/hero/Ellipse 7.png",
+    size: "sm" as SizeKey,
+    position: "ellipse-7" as PositionKey,
+  },
+  {
+    src: "/hero/Ellipse 4.png",
+    size: "md" as SizeKey,
+    position: "ellipse-4" as PositionKey,
+  },
+  {
+    src: "/hero/Ellipse 6.png",
+    size: "sm" as SizeKey,
+    position: "ellipse-6" as PositionKey,
+  },
+  {
+    src: "/hero/Ellipse 2.png",
+    size: "sm" as SizeKey,
+    position: "ellipse-2" as PositionKey,
+  },
+  {
+    src: "/hero/Ellipse 8.png",
+    size: "xs" as SizeKey,
+    position: "ellipse-8" as PositionKey,
+  },
+  {
+    src: "/hero/Ellipse 5.png",
+    size: "sm" as SizeKey,
+    position: "ellipse-5" as PositionKey,
+  },
+  {
+    src: "/hero/Ellipse 3.png",
+    size: "xs" as SizeKey,
+    position: "ellipse-3" as PositionKey,
+  },
 ];
 
-// Position classes mapping
-const positionClasses = {
+// ----- Position and Size Classes -----
+const positionClasses: Record<PositionKey, string> = {
   "logo-airbnb":
     "left-[20%] top-[18%] sm:top-[18%] sm:left-[20%] md:left-[22%] lg:top-[20%]",
   "logo-booking": "right-[20%] top-[20%] lg:top-[24%] lg:right-[23%]",
@@ -63,20 +107,30 @@ const positionClasses = {
   "ellipse-3": "right-[4%] bottom-[15%] md:bottom-[18%]",
 };
 
-const sizeClasses = {
+const sizeClasses: Record<PositionKey | SizeKey, string> = {
   xs: "w-1.75 h-1.75",
   sm: "w-3.25 h-3.25",
   md: "w-3.75 h-3.75",
+
   "logo-airbnb": "w-14 h-14 md:w-20 md:h-20 lg:w-26.5 lg:h-26.5",
   "logo-booking": "w-12 h-12 md:w-16 md:h-16 lg:w-16.5 lg:h-16.25",
   "logo-vrbo": "w-12 h-12 md:w-16 md:h-16 lg:w-18.75 lg:h-18.75",
   "logo-trip": "w-16 h-16 md:w-18 md:h-18 lg:w-22.25 lg:h-22.5",
+
+  "ellipse-7": "w-3.25 h-3.25",
+  "ellipse-4": "w-3.75 h-3.75",
+  "ellipse-6": "w-3.25 h-3.25",
+  "ellipse-2": "w-3.25 h-3.25",
+  "ellipse-8": "w-1.75 h-1.75",
+  "ellipse-5": "w-3.25 h-3.25",
+  "ellipse-3": "w-1.75 h-1.75",
 };
 
+// ----- Component -----
 export default function Hero() {
   return (
     <section className='relative min-h-screen overflow-hidden bg-white'>
-      {/* Background Elements */}
+      {/* Background */}
       <div className='pointer-events-none absolute inset-0 z-0'>
         <div
           className='absolute inset-0'
@@ -97,7 +151,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Decorative Elements */}
+      {/* Ellipses */}
       <div className='pointer-events-none absolute inset-0 z-30'>
         {ellipses.map((ellipse) => (
           <Image
@@ -113,6 +167,7 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className='relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center'>
+        {/* Egg Shape */}
         <div className='absolute w-[90%] max-w-[900px] h-[500px] bg-white backdrop-blur-2xl rounded-[50%_50%_50%_50%/50%_50%_50%_50%] opacity-70' />
 
         <div className='z-20'>
@@ -144,9 +199,9 @@ export default function Hero() {
             aliquip ex ea commodo consequat.
           </p>
 
-          {/* CTA Section */}
+          {/* CTA */}
           <div className='mt-8 flex flex-col items-center gap-4'>
-            <Button className='group flex items-center justify-center gap-2 px-3 py-2.5 lg:px-4 lg:py-3 xl:px-4.5 xl:py-5.5 bg-[#ed3c6a] rounded-[5px] hover:bg-[#d4325a] transition-all duration-200 hover:scale-105'>
+            <Button className='group flex items-center justify-center gap-2 px-3 py-2.5 lg:px-4 lg:py-3 xl:px-4.5 xl:py-5.5 bg-[#ed3c6a] rounded-[5px] hover:bg-[#d4325a] transition-all duration-200 hover:scale-105 cursor-pointer'>
               <span className='font-bold text-white text-xs xl:text-sm whitespace-nowrap'>
                 Schedule A Meeting
               </span>
