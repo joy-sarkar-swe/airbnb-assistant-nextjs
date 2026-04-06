@@ -1,5 +1,6 @@
 import ClientReviews from "@/components/client-reviews";
 import FAQ from "@/components/faq";
+import Footer from "@/components/footer";
 import GetStarted from "@/components/get-started";
 import HeroSection from "@/components/hero";
 import OnboardingSteps from "@/components/onboarding-steps";
@@ -22,6 +23,7 @@ export default function Home() {
       <ClientReviews />
       <FAQ />
       <StillHaveQuestions />
+      <Footer />
     </>
   );
 }
