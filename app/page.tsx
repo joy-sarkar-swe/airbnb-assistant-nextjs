@@ -1,3 +1,4 @@
+import ClientReviews from "@/components/client-reviews";
 import GetStarted from "@/components/get-started";
 import HeroSection from "@/components/hero";
 import OnboardingSteps from "@/components/onboarding-steps";
@@ -16,6 +17,7 @@ export default function Home() {
       <OurTools />
       <GetStarted />
       <OnboardingSteps />
+      <ClientReviews />
     </>
   );
 }
