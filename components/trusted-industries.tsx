@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 export default function TrustedIndustries() {
@@ -19,11 +20,14 @@ export default function TrustedIndustries() {
 
       <Marquee className='py-5 bg-[#F6F6F6]'>
         {[...logos, ...logos].map((name, idx) => (
-          <img
+          <Image
             key={idx}
             src={`/trusted-industries/${name}.svg`}
             alt={name}
-            className='h-8.5 inline-block mr-15 last:mr-15'
+            height={38}
+            width={100}
+            unoptimized
+            className='inline-block mr-15 last:mr-15'
           />
         ))}
       </Marquee>
