@@ -6,6 +6,7 @@ import OnboardingSteps from "@/components/onboarding-steps";
 import OurService from "@/components/our-service";
 import OurTools from "@/components/our-tools";
 import Pricing from "@/components/pricing";
+import StillHaveQuestions from "@/components/still-have-questions";
 import TrustedIndustries from "@/components/trusted-industries";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <OnboardingSteps />
       <ClientReviews />
       <FAQ />
+      <StillHaveQuestions />
     </>
   );
 }
