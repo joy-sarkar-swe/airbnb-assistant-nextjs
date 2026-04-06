@@ -168,7 +168,7 @@ export default function Hero() {
       {/* Main Content */}
       <div className='relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center'>
         {/* Egg Shape */}
-        <div className='absolute w-[90%] max-w-[900px] h-[500px] bg-white backdrop-blur-2xl rounded-[50%_50%_50%_50%/50%_50%_50%_50%] opacity-70' />
+        <div className='absolute w-[90%] max-w-125 h-125 bg-white backdrop-blur-2xl rounded-[50%_50%_50%_50%/50%_50%_50%_50%] opacity-70' />
 
         <div className='z-20'>
           {/* Floating Logos */}
@@ -201,7 +201,7 @@ export default function Hero() {
 
           {/* CTA */}
           <div className='mt-8 flex flex-col items-center gap-4'>
-            <Button className='group flex items-center justify-center gap-2 px-3 py-2.5 lg:px-4 lg:py-3 xl:px-4.5 xl:py-5.5 bg-[#ed3c6a] rounded-[5px] hover:bg-[#d4325a] transition-all duration-200 hover:scale-105 cursor-pointer'>
+            <Button className='group flex items-center justify-center gap-2 px-3 py-2.5 lg:px-4 lg:py-3 xl:px-4.5 xl:py-5.5 bg-[#ed3c6a] rounded-[5px] hover:bg-[#ED3C6A] transition-all duration-200 hover:scale-105 cursor-pointer'>
               <span className='font-bold text-white text-xs xl:text-sm whitespace-nowrap'>
                 Schedule A Meeting
               </span>

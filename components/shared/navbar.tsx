@@ -117,7 +117,7 @@ export default function Navbar() {
 
         {/* Desktop Button - Hidden on mobile and tablet, visible on lg screens */}
         <div className='hidden lg:block shrink-0'>
-          <Button className='flex items-center justify-center gap-2 px-3 py-2.5 lg:px-4 lg:py-3 xl:px-4.5 xl:py-5.5 bg-[#ed3c6a] rounded-[5px] overflow-hidden hover:bg-[#d4325a] border-none cursor-pointer transition-all duration-200 hover:scale-105'>
+          <Button className='flex items-center justify-center gap-2 px-3 py-2.5 lg:px-4 lg:py-3 xl:px-4.5 xl:py-5.5 bg-[#ED3C6A] rounded-[5px] overflow-hidden hover:bg-[#d4325a] border-none cursor-pointer transition-all duration-200 hover:scale-105'>
             <span className=' font-bold text-[#ffffff] text-xs xl:text-sm text-center tracking-[0] leading-3.5 whitespace-nowrap'>
               Schedule A Meeting
             </span>
@@ -155,7 +155,6 @@ export default function Navbar() {
                   key={link.label}
                   onClick={() => {
                     setActiveNav(link.label);
-                    setIsMobileMenuOpen(false);
                     if (link.href !== "#") {
                       const element = document.querySelector(link.href);
                       element?.scrollIntoView({ behavior: "smooth" });
