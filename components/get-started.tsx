@@ -37,16 +37,16 @@ export default function GetStarted() {
         </h2>
       </div>
 
-      <p className='font-medium text-black text-center text-sm md:text-base max-w-[700px] mx-auto mb-16'>
+      <p className='font-medium text-black text-center text-sm md:text-base max-w-175 mx-auto mb-16'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
 
       {/* Steps */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-300 mx-auto'>
         {onboardingSteps.map((step, index) => (
           <div key={index} className='flex flex-col items-center gap-4'>
-            <div className='relative w-full max-w-[280px] pt-5'>
+            <div className='relative w-full max-w-70 pt-5'>
               {/* Number */}
               <div className='absolute top-0 -left-2 z-10 w-14 h-14 md:w-16 md:h-16 rounded-full border-[#ed3c6a] border-4 bg-white flex items-center justify-center text-xl md:text-[29px] font-medium'>
                 {step.number}
@@ -54,7 +54,7 @@ export default function GetStarted() {
 
               {/* Card */}
               <div
-                className={`w-full h-[180px] md:h-48 bg-white rounded-[9px] ${step.cardBorder} flex items-center justify-center`}>
+                className={`w-full h-45 md:h-48 bg-white rounded-[9px] ${step.cardBorder} flex items-center justify-center`}>
                 <Image
                   src={step.icon}
                   alt={`Step ${step.number}`}

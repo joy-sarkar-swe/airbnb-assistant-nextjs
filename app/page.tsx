@@ -1,5 +1,6 @@
 import GetStarted from "@/components/get-started";
 import HeroSection from "@/components/hero";
+import OnboardingSteps from "@/components/onboarding-steps";
 import OurService from "@/components/our-service";
 import OurTools from "@/components/our-tools";
 import Pricing from "@/components/pricing";
@@ -14,6 +15,7 @@ export default function Home() {
       <Pricing />
       <OurTools />
       <GetStarted />
+      <OnboardingSteps />
     </>
   );
 }
