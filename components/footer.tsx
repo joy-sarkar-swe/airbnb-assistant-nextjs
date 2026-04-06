@@ -85,10 +85,10 @@ const socialIcons = [
 export default function Footer() {
   return (
     <footer className='w-full flex flex-col'>
-      <div className='w-full bg-white border-t border-solid border-[#d5d5d5] py-10 px-6 sm:px-10 lg:px-[104px]'>
+      <div className='w-full bg-white border-t border-solid border-[#d5d5d5] py-10 px-6 sm:px-10 lg:px-26'>
         <div className='flex flex-col gap-10 lg:flex-row lg:justify-between lg:items-start'>
           {/* Left */}
-          <div className='flex flex-col gap-6 w-full lg:max-w-[360px]'>
+          <div className='flex flex-col gap-6 w-full lg:max-w-90'>
             <Image
               alt='Google logo'
               src='/Google-Logo.png'
